@@ -22,4 +22,9 @@ public class Conta {
     public void debitar(double debito) {
         saldo -= debito;
     }
+
+    public void transferir(Conta contaDestino, double valor) {
+        this.debitar(valor);
+        contaDestino.creditar(valor);
+    }
 }
